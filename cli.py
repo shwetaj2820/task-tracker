@@ -1,12 +1,15 @@
-import cmd
-# import json
-# filename = data.json
+import sys
+from commands import CLI
+from task_manager import add_task
+from utils import parse_args
 
-class CLI(cmd.Cmd):
-    prompt=">> "
-    intro="Welcome to task tracker. Type 'help' for list of all commands"
+def main():
+    command, args = parse_args()
 
+    if command == "add" and args:
+        add_task(args)
+    else:
+        CLI().cmdloop()
 
-if __name__=="__main__":
-    cli = CLI()
-    cli.cmdloop()
+if __name__ == "__main__":
+    main()
