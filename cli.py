@@ -1,6 +1,6 @@
 import sys
 from commands import CLI
-from task_manager import add_task
+from task_manager import *
 from utils import parse_args
 
 def main():
@@ -8,6 +8,11 @@ def main():
 
     if command == "add" and args:
         add_task(args)
+    else:
+        CLI().cmdloop()
+
+    if command == "delete" and args:
+        delete_task(args)
     else:
         CLI().cmdloop()
 
