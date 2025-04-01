@@ -22,3 +22,11 @@ python3 cli.py
 add <task description>
 list
 delete <task id>
+```
+**Tech Stack**
+- **Language:** Python
+- **Libraries Used:** \
+  ```cmd``` : built-in library for CLI interaction \
+  ```json``` : For storing tasks persistently \
+  ```os``` : File handling for JSON storage \
+  ```sys``` : Command-line argument parsing
